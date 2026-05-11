@@ -40,6 +40,7 @@ body {
   font-family: "DM Sans", sans-serif;
   font-weight: 300;
   line-height: 1.7;
+  text-align: justify;
   overflow-x: hidden;
   transition:
     background 0.3s,
@@ -185,7 +186,7 @@ nav {
   max-width: 1100px;
 }
 .hero-content {
-  max-width: 600px;
+  max-width: 700px;
 }
 .hero-photo {
   width: 240px;
@@ -217,7 +218,7 @@ nav {
 }
 h1 {
   font-family: "DM Serif Display", serif;
-  font-size: clamp(3rem, 7vw, 5rem);
+  font-size: clamp(2rem, 5vw, 3.5rem);
   line-height: 1.05;
   margin-bottom: 1.5rem;
   letter-spacing: -0.02em;
@@ -229,9 +230,13 @@ h1 em {
 .hero-sub {
   font-size: 1.05rem;
   color: var(--muted);
-  max-width: 480px;
+  max-width: 700px;
   margin-bottom: 3rem;
   line-height: 1.8;
+}
+.hero-sub strong {
+  color: var(--text);
+  font-weight: 500;
 }
 .hero-links {
   display: flex;
@@ -269,7 +274,7 @@ h1 em {
 }
 
 section {
-  padding: 6rem 4rem;
+  padding: 4rem 4rem;
   border-top: 1px solid var(--border);
 }
 .section-label {
@@ -286,12 +291,48 @@ h2 {
   margin-bottom: 3rem;
   letter-spacing: -0.02em;
 }
-
+.edu-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.edu-item {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 1rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border);
+}
+.edu-item:last-child {
+  border-bottom: none;
+}
+.edu-year {
+  font-family: "DM Mono", monospace;
+  font-size: 0.75rem;
+  color: var(--muted);
+  padding-top: 0.2rem;
+}
+.edu-degree {
+  font-weight: 500;
+  font-size: 0.95rem;
+  color: var(--text);
+  margin-bottom: 0.2rem;
+}
+.edu-school {
+  color: var(--accent);
+  font-family: "DM Mono", monospace;
+  font-size: 0.8rem;
+  margin-bottom: 0.2rem;
+}
+.edu-detail {
+  color: var(--muted);
+  font-size: 0.8rem;
+}
 .about-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 4rem;
-  align-items: start;
+  align-items: end;
 }
 .about-text p {
   color: var(--muted);
@@ -308,6 +349,7 @@ h2 {
   gap: 1rem;
 }
 .skill-card {
+  text-align: left;
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: 6px;
@@ -435,6 +477,7 @@ h2 {
   font-weight: 500;
   margin-bottom: 0.3rem;
   color: var(--text);
+  text-align: left;
 }
 .step p {
   font-size: 0.8rem;
@@ -471,7 +514,7 @@ h2 {
 .exp-list {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  /* gap: 1.5rem; */
 }
 .exp-item {
   display: grid;
@@ -650,7 +693,6 @@ h1 {
 
 .pipeline-video {
   width: 100%;
-  border-radius: 18px;
   object-fit: cover;
 }
 .results-grid {
@@ -672,10 +714,11 @@ h1 {
 }
 .result-number {
   font-family: "DM Mono", monospace;
-  font-size: 0.7rem;
+  font-size: 0.8rem;
+  font-weight: bold;
   color: var(--accent);
   letter-spacing: 0.15em;
-  margin-bottom: 0.75rem;
+  /* margin-bottom: 0.75rem; */
 }
 .result-card h3 {
   font-family: "DM Serif Display", serif;
@@ -708,4 +751,21 @@ h1 {
   .results-grid {
     grid-template-columns: 1fr;
   }
+}
+@media (max-width: 768px) {
+  .project-header {
+    flex-direction: column-reverse;
+    gap: 0.5rem;
+  }
+}
+
+.nav-avatar {
+  width: 48px;
+  height: 48px;
+  object-fit: cover;
+  border-radius: 12px;
+  position: absolute;
+  left: 1.5rem;
+  top: 50%;
+  transform: translateY(-50%);
 }

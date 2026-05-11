@@ -41,18 +41,26 @@
           <div class="hero-tag">
             Robotics Perception · 3D Scene Understanding
           </div>
-          <h1>Maria Jose<br /><em>Usma Rodas</em></h1>
+          <h1>Maria Jose Usma Rodas</h1>
           <p class="hero-sub">
-            Master's student in Electronic Engineering at Jeonbuk National
-            University, working on object-level semantic mapping for robotics.
-            My research combines Gaussian Splatting, SAM2-based temporal mask
-            propagation, RGB-D geometry, and vision-language models to build
-            semantically meaningful 3D scene representations.
+            I am an M.S. student in Electronic Engineering at
+            <strong>Jeonbuk National University</strong>, working on robotics
+            perception, 3D scene understanding, and vision-language mapping. My
+            research focuses on object-level semantic Gaussian mapping using
+            SplaTAM, SAM2, and CLIP, with interests in semantic SLAM, 3D
+            reconstruction, open-vocabulary scene understanding, and
+            object-level robotic perception. Before graduate school, I worked in
+            embedded firmware and web development, which shaped my interest in
+            building complete, reproducible systems.
           </p>
+
           <div class="hero-links">
             <a href="#research" class="btn btn-primary">View Research</a>
-            <a href="mailto:mariajoseusma@hotmail.com" class="btn btn-outline"
-              >Get in Touch</a
+            <a
+              href="assets/personal/CV.pdf"
+              target="_blank"
+              class="btn btn-outline"
+              >Resume</a
             >
             <a
               href="https://github.com/mjusmar"
@@ -74,27 +82,27 @@
 
     <!-- ABOUT -->
     <section id="about">
-      <div class="section-label">01 — About</div>
-      <h2>Background</h2>
       <div class="about-grid">
         <div class="about-text">
-          <p>
-            I am a Master's student in Electronic Engineering at
-            <strong>Jeonbuk National University</strong>, working on 3D scene
-            understanding, semantic mapping, and robotics perception.
-          </p>
-
-          <p>
-            My current research focuses on building object-level semantic
-            representations from RGB-D sequences and Gaussian Splatting-based
-            reconstructions.
-          </p>
-
-          <p>
-            Before graduate school, I worked in embedded firmware and web
-            development, which shaped my interest in building complete,
-            reproducible systems.
-          </p>
+          <h2>About</h2>
+          <div class="edu-timeline">
+            <div class="edu-item">
+              <div class="edu-year">2024 — 2026</div>
+              <div class="edu-info">
+                <div class="edu-degree">M.Sc. Electronic Engineering</div>
+                <div class="edu-school">Jeonbuk National University</div>
+                <div class="edu-detail">AI Robotics Laboratory</div>
+              </div>
+            </div>
+            <div class="edu-item">
+              <div class="edu-year">2016 — 2021</div>
+              <div class="edu-info">
+                <div class="edu-degree">B.Sc. Electronic Engineering</div>
+                <div class="edu-school">National University of Colombia</div>
+                <div class="edu-detail">2nd highest GPA in cohort</div>
+              </div>
+            </div>
+          </div>
           <div class="award">
             <span class="award-icon">🏅</span>
             <div>
@@ -144,7 +152,6 @@
 
     <!-- RESEARCH -->
     <section id="research">
-      <div class="section-label">02 — Research</div>
       <h2>Master's Thesis</h2>
 
       <div class="project-hero">
@@ -152,7 +159,16 @@
           <div>
             <h3>
               Object-Level Semantic Gaussian Mapping Using Temporally Consistent
-              SAM2 Masks and SplaTAM Scene Reconstruction
+              SAM2 Masks and SplaTAM Scene Reconstruction <br />
+              <span
+                style="
+                  font-family: &quot;DM Mono&quot;, monospace;
+                  font-size: 0.75rem;
+                  color: var(--accent);
+                  white-space: nowrap;
+                "
+                >Ongoing · 2024–2026</span
+              >
             </h3>
             <ul class="project-bullets">
               <li>
@@ -193,15 +209,6 @@
               <span class="tag">SLAM</span>
             </div>
           </div>
-          <span
-            style="
-              font-family: &quot;DM Mono&quot;, monospace;
-              font-size: 0.75rem;
-              color: var(--accent);
-              white-space: nowrap;
-            "
-            >Ongoing · 2024–2026</span
-          >
         </div>
 
         <video autoplay loop muted playsinline class="pipeline-video">
@@ -209,10 +216,10 @@
         </video>
 
         <div class="project-details">
-          <h4>Pipeline Stages</h4>
+          <h4>Pipeline Components</h4>
           <div class="pipeline-steps">
             <div class="step">
-              <div class="step-num">A.</div>
+              <div class="step-num">Component A.</div>
               <h5>Inputs and Geometric Backbone</h5>
               <p>
                 RGB-D frames, depth maps, camera poses, keyframes, and the
@@ -220,7 +227,7 @@
               </p>
             </div>
             <div class="step">
-              <div class="step-num">B.</div>
+              <div class="step-num">Component B.</div>
               <h5>Object-level 3D Reconstruction</h5>
               <p>
                 SAM2 propagates object masks across frames while preserving
@@ -229,7 +236,7 @@
               </p>
             </div>
             <div class="step">
-              <div class="step-num">C.</div>
+              <div class="step-num">Component C.</div>
               <h5>Object-level Semantic Labeling.</h5>
               <p>
                 Multi-view CLIP assigns semantic labels to each reconstructed
@@ -237,7 +244,7 @@
               </p>
             </div>
             <div class="step">
-              <div class="step-num">D.</div>
+              <div class="step-num">Component D.</div>
               <h5>Object-aware Gaussian Representation</h5>
               <p>
                 Object IDs and semantic labels are associated with nearby
@@ -255,8 +262,11 @@
 
           <div class="results-grid">
             <div class="result-card">
-              <div class="result-number">01</div>
-              <h3>Temporal Mask Consistency</h3>
+              <div class="result-number">Evaluation 01.</div>
+              <h3>
+                Object-level 3D reconstruction consistency<br />
+                <em>(Component B)</em>
+              </h3>
               <p>
                 SAM2 preserves object identities across RGB-D frames, enabling
                 temporally consistent 2D masks for object-level reconstruction.
@@ -268,8 +278,12 @@
             </div>
 
             <div class="result-card">
-              <div class="result-number">02</div>
-              <h3>Object-level 3D Reconstruction</h3>
+              <div class="result-number">Evaluation 02.</div>
+              <h3>
+                Multi-view Mask-to-Semantics Consistency <br /><em
+                  >(Component B → C)</em
+                >
+              </h3>
               <p>
                 Temporally consistent masks are lifted into 3D using SplaTAM
                 depth and camera poses, producing coherent object-level point
@@ -282,8 +296,12 @@
             </div>
 
             <div class="result-card">
-              <div class="result-number">03</div>
-              <h3>Multi-view Semantic Labeling</h3>
+              <div class="result-number">Evaluation 03.</div>
+              <h3>
+                Reconstruction-to-Gaussian association consistency <br /><em
+                  >(Component B → D)</em
+                >
+              </h3>
               <p>
                 Multi-view CLIP aggregates selected object crops to assign
                 open-vocabulary semantic labels to reconstructed objects.
@@ -296,8 +314,12 @@
             </div>
 
             <div class="result-card">
-              <div class="result-number">04</div>
-              <h3>Object-aware Gaussian Map</h3>
+              <div class="result-number">Evaluation 04.</div>
+              <h3>
+                Semantic transfer to the Gaussian map <br /><em
+                  >(Component C → D)</em
+                >
+              </h3>
               <p>
                 Object IDs and semantic labels are transferred to nearby
                 Gaussian primitives through geometric association — without
@@ -315,8 +337,7 @@
 
     <!-- EXPERIENCE -->
     <section id="experience">
-      <div class="section-label">03 — Experience</div>
-      <h2>Work History</h2>
+      <h2>Experience</h2>
       <div class="exp-list">
         <div class="exp-item">
           <div class="exp-date">2024 — present</div>
@@ -327,7 +348,7 @@
             </div>
             <p>
               Developing object-level semantic Gaussian mapping pipeline for
-              robot perception and embodied AI.
+              robot perception.
             </p>
           </div>
         </div>
@@ -369,10 +390,9 @@
 
     <!-- CONTACT -->
     <section id="contact">
-      <div class="section-label">04 — Contact</div>
       <div class="contact-inner">
         <div class="contact-text">
-          <h2>Let's connect</h2>
+          <h2>Contact</h2>
           <p>
             I'm currently open to research collaborations, internship
             opportunities, and PhD positions in robotics perception, semantic
@@ -389,13 +409,16 @@
           </p>
         </div>
         <div class="contact-links">
-          <a href="mailto:mariajoseusma@hotmail.com" class="contact-link">
+          <div
+            class="contact-link"
+            onclick="copyEmail()"
+            style="cursor: pointer"
+          >
             <span class="cl-icon">✉</span>
             <div>
-              <div>mariajoseusma@hotmail.com</div>
-              <div class="cl-label">Email</div>
+              <div id="email-text">mariajoseusma@hotmail.com</div>
             </div>
-          </a>
+          </div>
           <a
             href="https://linkedin.com/in/mjusmar"
             target="_blank"
@@ -426,19 +449,6 @@
       <img src="avatar.png" class="footer-avatar" />
       <div class="footer-text">Maria Jose Usma Rodas · 2026</div>
     </div>
-
-    <script>
-      function toggleTheme() {
-        const html = document.documentElement;
-        const current = html.getAttribute("data-theme");
-        const next = current === "light" ? "dark" : "light";
-        html.setAttribute("data-theme", next);
-        localStorage.setItem("theme", next);
-      }
-      (function () {
-        const saved = localStorage.getItem("theme");
-        if (saved) document.documentElement.setAttribute("data-theme", saved);
-      })();
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>
