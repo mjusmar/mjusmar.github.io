@@ -1,22 +1,33 @@
+const avatarLight = "assets/personal/avatar_light.png";
+const avatarDark = "assets/personal/avatar_dark.png";
+
+// precarga
+new Image().src = avatarLight;
+new Image().src = avatarDark;
+
 history.scrollRestoration = "manual";
-window.onload = () => window.scrollTo(0, 0);
 
 window.onload = () => {
+  window.scrollTo(0, 0);
   if (window.location.hash) {
     history.replaceState(null, null, " ");
-    window.scrollTo(0, 0);
   }
 };
 
-window.onbeforeunload = () => {
-  window.scrollTo(0, 0);
-};
+window.onbeforeunload = () => window.scrollTo(0, 0);
 
 function toggleTheme() {
   const html = document.documentElement;
   const next = html.getAttribute("data-theme") === "light" ? "dark" : "light";
   html.setAttribute("data-theme", next);
   localStorage.setItem("theme", next);
+
+  const avatar = document.querySelector(".footer-avatar");
+  avatar.style.opacity = "0";
+  setTimeout(() => {
+    avatar.src = next === "light" ? avatarLight : avatarDark;
+    avatar.style.opacity = "1";
+  }, 250);
 }
 
 function copyEmail() {

@@ -2,8 +2,15 @@
 <html lang="en">
   <head>
     <script>
-      const saved = localStorage.getItem("theme");
-      document.documentElement.setAttribute("data-theme", saved || "light");
+      const saved = localStorage.getItem("theme") || "light";
+      document.documentElement.setAttribute("data-theme", saved);
+      document.addEventListener("DOMContentLoaded", () => {
+        const avatar = document.querySelector(".footer-avatar");
+        avatar.src =
+          saved === "light"
+            ? "assets/personal/avatar_light.png"
+            : "assets/personal/avatar_dark.png";
+      });
     </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -43,7 +50,9 @@
       <div class="hero-inner">
         <div class="hero-content">
           <div class="hero-tag">
-            Robotics Perception · 3D Scene Understanding
+            <p>Robotics Perception,</p>
+            <p>3D Scene Understanding,</p>
+            <p>Gaussian Splatting SLAM</p>
           </div>
           <h1>Maria Jose Usma Rodas</h1>
           <p class="hero-sub">
@@ -51,8 +60,8 @@
             <strong>Jeonbuk National University</strong>, working on robotics
             perception, 3D scene understanding, and vision-language mapping. My
             research focuses on object-level semantic Gaussian mapping using
-            SplaTAM, SAM2, and CLIP, with interests in semantic SLAM, 3D
-            reconstruction, open-vocabulary scene understanding, and
+            SplaTAM, SAM2, and CLIP, with interests in Gaussian Splatting SLAM,
+            3D reconstruction, open-vocabulary scene understanding, and
             object-level robotic perception. Before graduate school, I worked in
             firmware and web development, which shaped my interest in building
             complete, reproducible systems.
@@ -136,8 +145,8 @@
             </p>
           </div>
           <div class="skill-card">
-            <h4>ML / VLMs</h4>
-            <p>SAM2, CLIP, vision-language models, semantic segmentation</p>
+            <h4>Models & Frameworks</h4>
+            <p>SplaTAM, SAM2, CLIP</p>
           </div>
           <div class="skill-card">
             <h4>Tools</h4>
@@ -168,15 +177,7 @@
             <h3>
               Object-Level Semantic Gaussian Mapping Using Temporally Consistent
               SAM2 Masks and SplaTAM Scene Reconstruction <br />
-              <span
-                style="
-                  font-family: &quot;DM Mono&quot;, monospace;
-                  font-size: 0.9rem;
-                  color: var(--accent);
-                  white-space: nowrap;
-                "
-                >Ongoing · 2024–2026</span
-              >
+              <span class="project-header-date">Ongoing </span>
             </h3>
             <ul class="project-bullets">
               <li>
@@ -191,10 +192,9 @@
                 <p>
                   These reconstructed objects connect 2D mask propagation,
                   multi-view CLIP semantic labeling, and the final Gaussian map.
-                  Instead of retraining or modifying the Gaussian
-                  representation, object identities and semantic labels are
-                  transferred to nearby Gaussian primitives through geometric
-                  association.
+                  Instead of training or modifying the Gaussian representation,
+                  object identities and semantic labels are transferred to
+                  nearby Gaussian primitives through geometric association.
                 </p>
               </li>
 
@@ -403,8 +403,8 @@
           <h2>Contact</h2>
           <p>
             I'm currently open to research collaborations, internship
-            opportunities, and PhD positions in robotics perception, semantic
-            SLAM, and 3D scene understanding.
+            opportunities, and PhD positions in robotics perception, Gaussian
+            Splatting SLAM, and 3D scene understanding.
           </p>
           <p
             style="
@@ -455,7 +455,9 @@
     </section>
 
     <div class="footer">
-      <img src="assets/personal/avatar.png" class="footer-avatar" />
+      <div class="footer-avatar-wrapper">
+        <img src="assets/personal/avatar_light.png" class="footer-avatar" />
+      </div>
       <div class="footer-text">Maria Jose Usma Rodas · 2026</div>
     </div>
     <script src="script.js"></script>
