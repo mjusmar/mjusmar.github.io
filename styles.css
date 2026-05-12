@@ -410,6 +410,7 @@ h2 {
   font-family: "DM Serif Display", serif;
   font-size: 1.6rem;
   margin-bottom: 0.5rem;
+  text-align: left;
 }
 .project-header p {
   color: var(--muted);
@@ -748,6 +749,7 @@ h1 {
   padding: 3rem;
   border-top: 1px solid var(--border);
 }
+
 .footer-avatar {
   width: 180px;
   height: 180px;
@@ -756,7 +758,7 @@ h1 {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  transition: opacity 0.25s;
+  transition: opacity 0.25s ease-in-out;
   /* border-radius: 24px; */
   /* box-shadow:
     0 0 20px 8px rgba(245, 244, 249, 0.15),
@@ -824,6 +826,7 @@ h1 {
   font-size: 1.2rem;
   margin-bottom: 0.75rem;
   color: var(--text);
+  text-align: left;
 }
 .result-card p {
   font-size: 0.9rem;

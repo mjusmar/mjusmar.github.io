@@ -1,5 +1,5 @@
-const avatarLight = "assets/personal/avatar_light.png";
-const avatarDark = "assets/personal/avatar_dark.png";
+const avatarLight = "assets/personal/avatar_light.gif";
+const avatarDark = "assets/personal/avatar_dark.gif";
 
 // precarga
 new Image().src = avatarLight;

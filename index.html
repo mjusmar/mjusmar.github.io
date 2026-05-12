@@ -8,8 +8,8 @@
         const avatar = document.querySelector(".footer-avatar");
         avatar.src =
           saved === "light"
-            ? "assets/personal/avatar_light.png"
-            : "assets/personal/avatar_dark.png";
+            ? "assets/personal/avatar_light.gif"
+            : "assets/personal/avatar_dark.gif";
       });
     </script>
     <meta charset="UTF-8" />
@@ -50,21 +50,22 @@
       <div class="hero-inner">
         <div class="hero-content">
           <div class="hero-tag">
-            <p>Robotics Perception,</p>
-            <p>3D Scene Understanding,</p>
+            <p>Robotics Perception</p>
+            <p>·</p>
+            <p>3D Scene Understanding</p>
+            <p>·</p>
             <p>Gaussian Splatting SLAM</p>
           </div>
           <h1>Maria Jose Usma Rodas</h1>
           <p class="hero-sub">
-            I am an M.S. student in Electronic Engineering at
-            <strong>Jeonbuk National University</strong>, working on robotics
-            perception, 3D scene understanding, and vision-language mapping. My
-            research focuses on object-level semantic Gaussian mapping using
-            SplaTAM, SAM2, and CLIP, with interests in Gaussian Splatting SLAM,
-            3D reconstruction, open-vocabulary scene understanding, and
-            object-level robotic perception. Before graduate school, I worked in
-            firmware and web development, which shaped my interest in building
-            complete, reproducible systems.
+            I am an M.S. student in Electronic Engineering at Jeonbuk National
+            University, working on robotics perception and 3D scene
+            understanding. My research focuses on object-level semantic Gaussian
+            mapping with SplaTAM, SAM2, and CLIP, connecting Gaussian Splatting
+            SLAM, 3D reconstruction, and open-vocabulary scene understanding for
+            robotics. Before graduate school, I worked in firmware and web
+            development, which shaped my interest in building complete,
+            reproducible systems
           </p>
 
           <div class="hero-links">
@@ -138,30 +139,31 @@
             <p>Python, C/C++, JavaScript</p>
           </div>
           <div class="skill-card">
-            <h4>3D Vision</h4>
-            <p>
-              RGB-D processing, point clouds, Gaussian Splatting, 2D–3D
-              projection
-            </p>
-          </div>
-          <div class="skill-card">
             <h4>Models & Frameworks</h4>
             <p>SplaTAM, SAM2, CLIP</p>
           </div>
+          <div class="skill-card">
+            <h4>Research Interests</h4>
+            <p>
+              Robotics perception, Gaussian Splatting SLAM, open-vocabulary
+              semantic mapping, object-level 3D reconstruction
+            </p>
+          </div>
+          <div class="skill-card">
+            <h4>Core Techniques</h4>
+            <p>
+              RGB-D processing, point clouds, 3D Gaussian primitives, 2D–3D
+              projection, multi-view feature aggregation
+            </p>
+          </div>
+
           <div class="skill-card">
             <h4>Tools</h4>
             <p>PyTorch, Open3D, Git, Linux, Docker, Qt, Pandas</p>
           </div>
           <div class="skill-card">
-            <h4>Methods</h4>
-            <p>
-              DBSCAN, KD-tree search, voxel downsampling, multi-view feature
-              aggregation
-            </p>
-          </div>
-          <div class="skill-card">
             <h4>Languages</h4>
-            <p>Spanish (native) · English (fluent) · Korean (intermediate)</p>
+            <p>Spanish (native), English (fluent), Korean (intermediate)</p>
           </div>
         </div>
       </div>
@@ -211,10 +213,9 @@
               <span class="tag">SplaTAM</span>
               <span class="tag">SAM2</span>
               <span class="tag">CLIP</span>
-              <span class="tag">Gaussian Splatting</span>
+              <span class="tag">Gaussian Splatting SLAM</span>
               <span class="tag">Semantic Segmentation</span>
               <span class="tag">Scene Understanding</span>
-              <span class="tag">SLAM</span>
             </div>
           </div>
         </div>
@@ -230,8 +231,9 @@
               <div class="step-num">Component A.</div>
               <h5>Inputs and Geometric Backbone</h5>
               <p>
-                RGB-D frames, depth maps, camera poses, keyframes, and the
-                reconstructed Gaussian map are obtained from SplaTAM.
+                SplaTAM provides the RGB-D frames, depth maps, camera poses,
+                keyframes, and reconstructed Gaussian map used as the geometric
+                backbone.
               </p>
             </div>
             <div class="step">
@@ -239,7 +241,7 @@
               <h5>Object-level 3D Reconstruction</h5>
               <p>
                 SAM2 propagates object masks across frames while preserving
-                consistent object identities over time. Masked depth pixels are
+                consistent object identities. Masked depth pixels are
                 back-projected into 3D and fused into object-level point clouds.
               </p>
             </div>
@@ -255,8 +257,8 @@
               <div class="step-num">Component D.</div>
               <h5>Object-aware Gaussian Representation</h5>
               <p>
-                Object IDs and semantic labels are associated with nearby
-                Gaussian primitives without retraining the map.
+                Object IDs and semantic labels are associated with nearby 3D
+                Gaussian primitives without training the Gaussian map.
               </p>
             </div>
           </div>
@@ -272,12 +274,11 @@
             <div class="result-card">
               <div class="result-number">Evaluation 01.</div>
               <h3>
-                Object-level 3D reconstruction consistency<br />
-                <em>(Component B)</em>
+                Are object identities temporally stable across frames? <br />
               </h3>
               <p>
-                SAM2 preserves object identities across RGB-D frames, enabling
-                temporally consistent 2D masks for object-level reconstruction.
+                SAM2 maintains object identities across RGB-D frames, supporting
+                stable object-level reconstruction.
               </p>
               <div class="result-metrics">
                 <span class="metric-pill">Temporal IoU up to 0.702</span>
@@ -288,14 +289,11 @@
             <div class="result-card">
               <div class="result-number">Evaluation 02.</div>
               <h3>
-                Multi-view Mask-to-Semantics Consistency <br /><em
-                  >(Component B → C)</em
-                >
+                Are the reconstructed objects geometrically consistent in 3D?
               </h3>
               <p>
-                Temporally consistent masks are lifted into 3D using SplaTAM
-                depth and camera poses, producing coherent object-level point
-                clouds.
+                Lifted object masks produce coherent object-level point clouds
+                when projected across views.
               </p>
               <div class="result-metrics">
                 <span class="metric-pill">Reprojection IoU 0.737–0.836</span>
@@ -306,13 +304,11 @@
             <div class="result-card">
               <div class="result-number">Evaluation 03.</div>
               <h3>
-                Reconstruction-to-Gaussian association consistency <br /><em
-                  >(Component B → D)</em
-                >
+                Does multi-view semantic labeling improve object recognition?
               </h3>
               <p>
-                Multi-view CLIP aggregates selected object crops to assign
-                open-vocabulary semantic labels to reconstructed objects.
+                Selected object views are aggregated with CLIP to support
+                open-vocabulary semantic labeling and uncertainty analysis.
               </p>
               <div class="result-metrics">
                 <span class="metric-pill"
@@ -324,14 +320,12 @@
             <div class="result-card">
               <div class="result-number">Evaluation 04.</div>
               <h3>
-                Semantic transfer to the Gaussian map <br /><em
-                  >(Component C → D)</em
-                >
+                Can object semantics be transferred to the Gaussian map without
+                training?
               </h3>
               <p>
-                Object IDs and semantic labels are transferred to nearby
-                Gaussian primitives through geometric association — without
-                retraining.
+                Object labels are associated with nearby Gaussian primitives
+                through geometric matching.
               </p>
               <div class="result-metrics">
                 <span class="metric-pill">Gaussian coverage &gt; 0.88</span>
