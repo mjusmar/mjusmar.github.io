@@ -1,6 +1,10 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <script>
+      const saved = localStorage.getItem("theme");
+      document.documentElement.setAttribute("data-theme", saved || "light");
+    </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Maria Jose Usma Rodas — Portfolio</title>
@@ -11,7 +15,7 @@
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body>
+  <body onload="window.scrollTo(0, 0)">
     <nav>
       <div class="nav-left">
         <button
@@ -50,8 +54,8 @@
             SplaTAM, SAM2, and CLIP, with interests in semantic SLAM, 3D
             reconstruction, open-vocabulary scene understanding, and
             object-level robotic perception. Before graduate school, I worked in
-            embedded firmware and web development, which shaped my interest in
-            building complete, reproducible systems.
+            firmware and web development, which shaped my interest in building
+            complete, reproducible systems.
           </p>
 
           <div class="hero-links">
@@ -76,7 +80,11 @@
             >
           </div>
         </div>
-        <img src="photo.jpg" alt="Maria Jose Usma" class="hero-photo" />
+        <img
+          src="assets/personal/photo.jpg"
+          alt="Maria Jose Usma"
+          class="hero-photo"
+        />
       </div>
     </section>
 
@@ -99,7 +107,7 @@
               <div class="edu-info">
                 <div class="edu-degree">B.Sc. Electronic Engineering</div>
                 <div class="edu-school">National University of Colombia</div>
-                <div class="edu-detail">2nd highest GPA in cohort</div>
+                <div class="edu-detail">2nd highest GPA in the cohort</div>
               </div>
             </div>
           </div>
@@ -118,7 +126,7 @@
         <div class="skills-grid">
           <div class="skill-card">
             <h4>Programming</h4>
-            <p>Python, C/C++</p>
+            <p>Python, C/C++, JavaScript</p>
           </div>
           <div class="skill-card">
             <h4>3D Vision</h4>
@@ -163,7 +171,7 @@
               <span
                 style="
                   font-family: &quot;DM Mono&quot;, monospace;
-                  font-size: 0.75rem;
+                  font-size: 0.9rem;
                   color: var(--accent);
                   white-space: nowrap;
                 "
@@ -210,11 +218,11 @@
             </div>
           </div>
         </div>
-
-        <video autoplay loop muted playsinline class="pipeline-video">
-          <source src="assets/pipeline-overview.mp4" type="video/mp4" />
-        </video>
-
+        <div class="project-overview">
+          <video autoplay loop muted playsinline class="pipeline-video">
+            <source src="assets/pipeline-overview.mp4" type="video/mp4" />
+          </video>
+        </div>
         <div class="project-details">
           <h4>Pipeline Components</h4>
           <div class="pipeline-steps">
@@ -417,6 +425,7 @@
             <span class="cl-icon">✉</span>
             <div>
               <div id="email-text">mariajoseusma@hotmail.com</div>
+              <div class="cl-label">Email</div>
             </div>
           </div>
           <a
@@ -446,7 +455,7 @@
     </section>
 
     <div class="footer">
-      <img src="avatar.png" class="footer-avatar" />
+      <img src="assets/personal/avatar.png" class="footer-avatar" />
       <div class="footer-text">Maria Jose Usma Rodas · 2026</div>
     </div>
     <script src="script.js"></script>

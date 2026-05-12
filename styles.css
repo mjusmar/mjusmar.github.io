@@ -33,12 +33,16 @@
 html {
   scroll-behavior: smooth;
 }
+section {
+  scroll-margin-top: 60px;
+}
 
 body {
   background: var(--bg);
   color: var(--text);
   font-family: "DM Sans", sans-serif;
   font-weight: 300;
+  font-size: 16px;
   line-height: 1.7;
   text-align: justify;
   overflow-x: hidden;
@@ -110,14 +114,14 @@ nav {
 
 .theme-toggle {
   width: 90px;
-  justify-content: center;
+  justify-content: left;
   background: none;
   border: 1px solid var(--border);
   border-radius: 20px;
   padding: 0.3rem 0.8rem;
   cursor: pointer;
   display: flex;
-  align-items: center;
+  align-items: start;
   gap: 0.4rem;
   font-size: 0.78rem;
   color: var(--muted);
@@ -142,12 +146,13 @@ nav {
 }
 
 .hero {
-  min-height: 100vh;
+  /* min-height: 100vh; */
   display: flex;
   align-items: center;
   padding: 8rem 4rem 4rem;
   position: relative;
   overflow: hidden;
+  place-self: center;
 }
 .hero::before {
   content: "";
@@ -156,11 +161,6 @@ nav {
   right: -200px;
   width: 700px;
   height: 700px;
-  background: radial-gradient(
-    circle,
-    rgba(124, 106, 247, 0.12) 0%,
-    transparent 70%
-  );
   pointer-events: none;
 }
 .hero::after {
@@ -184,6 +184,13 @@ nav {
   gap: 4rem;
   width: 100%;
   max-width: 1100px;
+  width: 100%;
+  margin: 0 auto;
+  background: radial-gradient(
+    ellipse 80% 80%,
+    rgba(124, 106, 247, 0.13) 10%,
+    #00000000 70%
+  );
 }
 .hero-content {
   max-width: 700px;
@@ -274,8 +281,10 @@ h1 em {
 }
 
 section {
-  padding: 4rem 4rem;
+  padding: 2rem 4rem;
   border-top: 1px solid var(--border);
+  max-width: 1400px;
+  margin: 0 auto;
 }
 .section-label {
   font-family: "DM Mono", monospace;
@@ -314,19 +323,19 @@ h2 {
 }
 .edu-degree {
   font-weight: 500;
-  font-size: 0.95rem;
+  font-size: 1rem;
   color: var(--text);
   margin-bottom: 0.2rem;
 }
 .edu-school {
   color: var(--accent);
   font-family: "DM Mono", monospace;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   margin-bottom: 0.2rem;
 }
 .edu-detail {
   color: var(--muted);
-  font-size: 0.8rem;
+  font-size: 0.9rem;
 }
 .about-grid {
   display: grid;
@@ -360,14 +369,14 @@ h2 {
 }
 .skill-card h4 {
   font-family: "DM Mono", monospace;
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   color: var(--accent);
   letter-spacing: 0.1em;
   text-transform: uppercase;
   margin-bottom: 0.75rem;
 }
 .skill-card p {
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   color: var(--muted);
   line-height: 1.6;
 }
@@ -399,6 +408,9 @@ h2 {
   color: var(--muted);
   font-size: 0.95rem;
   /* max-width: 500px;*/
+}
+.project-overview {
+  text-align-last: center;
 }
 .tags {
   display: flex;
@@ -447,7 +459,7 @@ h2 {
 }
 .project-details h4 {
   font-family: "DM Mono", monospace;
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   color: var(--accent);
   letter-spacing: 0.15em;
   text-transform: uppercase;
@@ -465,23 +477,79 @@ h2 {
   padding: 1rem;
   transition: background 0.3s;
 }
+.step:nth-child(1) {
+  border-color: rgb(78, 205, 196);
+  background: rgba(78, 205, 196, 0.08);
+}
+.step:nth-child(2) {
+  border-color: rgb(201, 132, 162);
+  background: rgba(201, 132, 162, 0.08);
+}
+.step:nth-child(3) {
+  border-color: rgb(143, 129, 199);
+  background: rgba(143, 129, 199, 0.08);
+}
+.step:nth-child(4) {
+  border-color: rgb(145, 187, 123);
+  background: rgba(145, 187, 123, 0.08);
+}
 .step-num {
   font-family: "DM Mono", monospace;
-  font-size: 0.8rem;
+  font-size: 0.95rem;
   color: var(--accent);
   margin-bottom: 0.4rem;
   font-weight: bold;
 }
+.step:nth-child(1) .step-num {
+  color: rgb(78, 205, 196);
+}
+.step:nth-child(2) .step-num {
+  color: rgb(201, 132, 162);
+}
+.step:nth-child(3) .step-num {
+  color: rgb(143, 129, 199);
+}
+.step:nth-child(4) .step-num {
+  color: rgb(145, 187, 123);
+}
 .step h5 {
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   font-weight: 500;
   margin-bottom: 0.3rem;
   color: var(--text);
   text-align: left;
 }
 .step p {
-  font-size: 0.8rem;
-  color: var(--muted);
+  font-size: 0.9rem;
+  /* color: #9999b0; */
+}
+
+/* dark mode */
+.step:nth-child(1) p {
+  color: rgba(200, 255, 251, 0.9);
+}
+.step:nth-child(2) p {
+  color: rgba(255, 200, 225, 0.9);
+}
+.step:nth-child(3) p {
+  color: rgba(220, 215, 255, 0.9);
+}
+.step:nth-child(4) p {
+  color: rgba(215, 240, 200, 0.9);
+}
+
+/* light mode */
+[data-theme="light"] .step:nth-child(1) p {
+  color: rgba(20, 90, 85, 0.9);
+}
+[data-theme="light"] .step:nth-child(2) p {
+  color: rgba(120, 50, 80, 0.9);
+}
+[data-theme="light"] .step:nth-child(3) p {
+  color: rgba(70, 55, 130, 0.9);
+}
+[data-theme="light"] .step:nth-child(4) p {
+  color: rgba(60, 90, 40, 0.9);
 }
 
 .metrics-row {
@@ -598,7 +666,7 @@ h2 {
   border: 1px solid var(--border);
   border-radius: 6px;
   padding: 0.75rem 1.25rem;
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   margin-top: 1.5rem;
   transition: background 0.3s;
 }
@@ -648,6 +716,7 @@ h1 {
   .hero-photo {
     width: 160px;
     height: 160px;
+    image-rendering: auto;
   }
   .about-grid,
   .contact-inner {
@@ -692,7 +761,7 @@ h1 {
 }
 
 .pipeline-video {
-  width: 100%;
+  width: 75%;
   object-fit: cover;
 }
 .results-grid {
@@ -701,7 +770,7 @@ h1 {
   gap: 1.5rem;
 }
 .result-card {
-  background: var(--surface);
+  background: var(--tag-bg);
   border: 1px solid var(--border);
   border-radius: 8px;
   padding: 2rem;
@@ -739,7 +808,7 @@ h1 {
 }
 .metric-pill {
   font-family: "DM Mono", monospace;
-  font-size: 0.7rem;
+  font-size: 0.9rem;
   padding: 0.3rem 0.75rem;
   background: var(--tag-bg);
   border: 1px solid var(--border);
