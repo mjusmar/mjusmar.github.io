@@ -50,10 +50,8 @@
       <div class="hero-inner">
         <div class="hero-content">
           <div class="hero-tag">
-            <p>Robotics Perception</p>
-            <p>·</p>
-            <p>3D Scene Understanding</p>
-            <p>·</p>
+            <p>Robotics Perception,</p>
+            <p>3D Scene Understanding,</p>
             <p>Gaussian Splatting SLAM</p>
           </div>
           <h1>Maria Jose Usma Rodas</h1>
@@ -196,9 +194,10 @@
                 <p>
                   These reconstructed objects connect 2D mask propagation,
                   multi-view CLIP semantic labeling, and the final Gaussian map.
-                  Instead of training or modifying the Gaussian representation,
-                  object identities and semantic labels are transferred to
-                  nearby Gaussian primitives through geometric association.
+                  Instead of retraining or modifying the Gaussian
+                  representation, object identities and semantic labels are
+                  transferred to nearby Gaussian primitives through geometric
+                  association.
                 </p>
               </li>
 
@@ -263,7 +262,7 @@
               <h5>Object-aware Gaussian Representation</h5>
               <p>
                 Object IDs and semantic labels are associated with nearby 3D
-                Gaussian primitives without training the Gaussian map.
+                Gaussian primitives without retraining the Gaussian map.
               </p>
             </div>
           </div>
@@ -275,15 +274,92 @@
             Experiments were conducted on multiple RGB-D indoor scenes from the
             <strong>Replica dataset</strong> , including both room and office
             environments.<br />
-            <strong>Scenes:</strong> room0, room1, room2, office2, office3,
-            office4. <br />
+
             The selected scenes from room and office layouts contain multiple
             furniture objects, large structural surfaces, partial occlusions,
             and viewpoint changes across RGB-D sequences. These conditions
             challenge the pipeline at multiple stages, including temporal mask
             propagation, 2D-to-3D object reconstruction, semantic labeling, and
-            association with the Gaussian scene representation.
+            association with the Gaussian scene representation.<br />
+
+            <strong>Scenes:</strong> room0, room1, room2, office2, office3,
+            office4. <br />
           </p>
+        </div>
+        <div class="project-details">
+          <h4>Results</h4>
+          <p
+            style="
+              color: var(--muted);
+              font-family: &quot;DM Mono&quot;, monospace;
+              font-size: 0.78rem;
+              margin-bottom: 1.5rem;
+            "
+          >
+            ⏱ Processing time — pipeline only.
+          </p>
+          <div class="scene-grid">
+            <div class="scene-card">
+              <div class="scene-imgs">
+                <img src="assets/results/room0_instance.gif" />
+                <img src="assets/results/room0_labeled.gif" />
+              </div>
+              <div class="scene-info">
+                <span class="scene-name">Room 0</span>
+                <span class="scene-metric">⏱ 51.41s</span>
+              </div>
+            </div>
+            <div class="scene-card">
+              <div class="scene-imgs">
+                <img src="assets/results/room1_instance.gif" />
+                <img src="assets/results/room1_labeled.gif" />
+              </div>
+              <div class="scene-info">
+                <span class="scene-name">Room 1</span>
+                <span class="scene-metric">⏱ 114.32s</span>
+              </div>
+            </div>
+            <div class="scene-card">
+              <div class="scene-imgs">
+                <img src="assets/results/room2_instance.gif" />
+                <img src="assets/results/room2_labeled.gif" />
+              </div>
+              <div class="scene-info">
+                <span class="scene-name">Room 2</span>
+                <span class="scene-metric">⏱ 57.24s</span>
+              </div>
+            </div>
+            <div class="scene-card">
+              <div class="scene-imgs">
+                <img src="assets/results/office2_instance.gif" />
+                <img src="assets/results/office2_labeled.gif" />
+              </div>
+              <div class="scene-info">
+                <span class="scene-name">Office 2</span>
+                <span class="scene-metric">⏱ 48.52s</span>
+              </div>
+            </div>
+            <div class="scene-card">
+              <div class="scene-imgs">
+                <img src="assets/results/office3_instace.gif" />
+                <img src="assets/results/office3_labeled.gif" />
+              </div>
+              <div class="scene-info">
+                <span class="scene-name">Office 3</span>
+                <span class="scene-metric">⏱ 41.87s</span>
+              </div>
+            </div>
+            <div class="scene-card">
+              <div class="scene-imgs">
+                <img src="assets/results/office4_instance.gif" />
+                <img src="assets/results/office4_labeled.gif" />
+              </div>
+              <div class="scene-info">
+                <span class="scene-name">Office 4</span>
+                <span class="scene-metric">⏱ 50.51s</span>
+              </div>
+            </div>
+          </div>
         </div>
         <div
           class="project-details"
@@ -342,7 +418,7 @@
               <div class="result-number">Evaluation 04.</div>
               <h3>
                 Can object semantics be transferred to the Gaussian map without
-                training?
+                retraining?
               </h3>
               <p>
                 Object labels are associated with nearby Gaussian primitives
@@ -482,7 +558,7 @@
 
     <div class="footer">
       <div class="footer-avatar-wrapper">
-        <img src="assets/personal/avatar_light.gif" class="footer-avatar" />
+        <img class="footer-avatar" />
       </div>
       <div class="footer-text">Maria Jose Usma Rodas · 2026</div>
     </div>
