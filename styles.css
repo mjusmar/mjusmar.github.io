@@ -830,6 +830,9 @@ h1 {
   gap: 1.5rem;
 }
 .result-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   background: var(--tag-bg);
   border: 1px solid var(--border);
   border-radius: 8px;
@@ -999,4 +1002,13 @@ h1 {
   font-family: "DM Mono", monospace;
   font-size: 0.75rem;
   color: var(--accent2);
+}
+
+@media (max-width: 768px) {
+  .scene-grid {
+    grid-template-columns: 1fr;
+  }
+  .scene-imgs img {
+    height: 120px;
+  }
 }
