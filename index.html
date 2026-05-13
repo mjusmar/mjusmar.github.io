@@ -221,10 +221,13 @@
             </div>
           </div>
         </div>
-        <div class="project-overview">
-          <video autoplay loop muted playsinline class="pipeline-video">
-            <source src="assets/pipeline-overview.mp4" type="video/mp4" />
-          </video>
+        <div class="project-details">
+          <h4>Pipeline Overview</h4>
+          <div class="project-video-wrapper">
+            <video autoplay loop muted playsinline class="pipeline-video">
+              <source src="assets/pipeline-overview.mp4" type="video/mp4" />
+            </video>
+          </div>
         </div>
         <div class="project-details">
           <h4>Pipeline Components</h4>
@@ -265,7 +268,23 @@
             </div>
           </div>
         </div>
+        <div class="project-details">
+          <h4>Dataset & Evaluation Scenes</h4>
 
+          <p>
+            Experiments were conducted on multiple RGB-D indoor scenes from the
+            <strong>Replica dataset</strong> , including both room and office
+            environments.<br />
+            <strong>Scenes:</strong> room0, room1, room2, office2, office3,
+            office4. <br />
+            The selected scenes from room and office layouts contain multiple
+            furniture objects, large structural surfaces, partial occlusions,
+            and viewpoint changes across RGB-D sequences. These conditions
+            challenge the pipeline at multiple stages, including temporal mask
+            propagation, 2D-to-3D object reconstruction, semantic labeling, and
+            association with the Gaussian scene representation.
+          </p>
+        </div>
         <div
           class="project-details"
           style="border-top: 1px solid var(--border)"
@@ -335,27 +354,37 @@
               </div>
             </div>
           </div>
+          <div class="results-sam">
+            <div class="result-card">
+              <div class="result-number">Evaluation 05.</div>
+              <h3>Why SAM2? <br /></h3>
+
+              <p>
+                SAM2 improves temporal consistency by propagating object masks
+                across RGB-D frames, which supports more stable object-level 3D
+                reconstruction.
+              </p>
+              <div class="sam-compare">
+                <div class="sam-item">
+                  <img src="assets/experiment/sam.svg" />
+                  <span class="sam-caption">Without SAM2</span>
+                </div>
+                <span>VS</span>
+                <div class="sam-item">
+                  <img src="assets/experiment/sam2.svg" />
+                  <span class="sam-caption">With SAM2</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- EXPERIENCE -->
     <section id="experience">
-      <h2>Experience</h2>
+      <h2>Work Experience</h2>
       <div class="exp-list">
-        <div class="exp-item">
-          <div class="exp-date">2024 — present</div>
-          <div class="exp-content">
-            <h4>M.Sc. Researcher — AI Robotics Laboratory</h4>
-            <div class="company">
-              Jeonbuk National University · Jeonju, South Korea
-            </div>
-            <p>
-              Developing object-level semantic Gaussian mapping pipeline for
-              robot perception.
-            </p>
-          </div>
-        </div>
         <div class="exp-item">
           <div class="exp-date">2022 — 2023</div>
           <div class="exp-content">
@@ -453,7 +482,7 @@
 
     <div class="footer">
       <div class="footer-avatar-wrapper">
-        <img src="assets/personal/avatar_light.png" class="footer-avatar" />
+        <img src="assets/personal/avatar_light.gif" class="footer-avatar" />
       </div>
       <div class="footer-text">Maria Jose Usma Rodas · 2026</div>
     </div>
