@@ -983,6 +983,8 @@ h1 {
   height: 160px;
   object-fit: cover;
   display: block;
+  background: var(--surface);
+  min-height: 160px;
 }
 .scene-imgs img:first-child {
   border-right: 1px solid var(--border);
